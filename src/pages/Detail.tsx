@@ -50,7 +50,7 @@ const Detail = () => {
                 </h5>
                 <div className="">
                   Genre :
-                  <div className="font-mono flex flex-wrap py-2 gap-2">
+                  <div className="font-mono flex flex-wrap py-2 gap-1">
                     {data?.genre_list.map((genre: any, key) => (
                       <p key={key}>{genre.genre_name} ,</p>
                     ))}
