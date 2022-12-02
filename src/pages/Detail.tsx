@@ -8,11 +8,6 @@ interface Detail {
   isLoading: boolean;
 }
 
-// interface Genre {
-//   genre: string;
-//   genre_name
-// }
-
 const Detail = () => {
   const { key } = useParams<{ key?: string }>();
 
@@ -20,7 +15,11 @@ const Detail = () => {
     `http://localhost:3000/api/manga/detail/${key}`
   );
 
-  console.log(data);
+  const [nextRead, setNextRead] = useState<boolean>(false);
+
+  const handleNextRead = () => {
+    setNextRead(!nextRead);
+  };
 
   return (
     <>
@@ -67,7 +66,17 @@ const Detail = () => {
               <h5 className="font-medium border-b border-gray-300 pb-2">
                 Synopis :
               </h5>
-              <p className="py-2">{data?.synopsis}</p>
+              <p className="py-2">
+                {nextRead ? data?.synopsis : data?.synopsis.substring(0, 300)}
+                {!nextRead && (
+                  <span
+                    className="underline text-blue-700 cursor-pointer ml-1"
+                    onClick={handleNextRead}
+                  >
+                    ...lanjutkan membaca
+                  </span>
+                )}
+              </p>
             </div>
           </div>
         </div>
