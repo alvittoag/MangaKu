@@ -14,8 +14,15 @@ export const GetApiHome = () => {
   return { data, isLoading };
 };
 
-const getApiDetail = () => {
-  const {} = useQuery({
+export const getApiDetail = (endpoint: string) => {
+  const { data, isLoading } = useQuery({
     queryKey: ["detail"],
+    queryFn: () =>
+      axios
+        .get(endpoint)
+        .then((res) => res.data)
+        .catch((err) => console.log(err)),
   });
+
+  return { data, isLoading };
 };
