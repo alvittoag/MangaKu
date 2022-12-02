@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between px-5 items-center py-4 bg-sky-500 text-white">
-      <h1 className="text-3xl font-bold">ManggaKu</h1>
+      <h1 className="text-3xl font-bold">MangaKu</h1>
       <div className="flex items-center gap-8 text-xl font-semibold cursor-pointer">
         <Link to="/">
           {navigation === 1 ? (
