@@ -26,3 +26,16 @@ export const getApiDetail = (endpoint: string) => {
 
   return { data, isLoading };
 };
+
+export const getApiSearch = (endpoint: string) => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["search"],
+    queryFn: () =>
+      axios
+        .get(endpoint)
+        .then((res) => res.data.manga_list)
+        .catch((err) => console.log(err)),
+  });
+
+  return { data, isLoading };
+};

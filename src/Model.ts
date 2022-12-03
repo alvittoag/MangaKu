@@ -6,6 +6,14 @@ export interface home {
   uploaded_on: string;
 }
 
+export interface Search {
+  title: string;
+  thumb: string;
+  endpoint: string;
+  type: string;
+  uploaded_on: string;
+}
+
 export interface detail {
   author: string;
   chapter: string[];
@@ -15,5 +23,12 @@ export interface detail {
   thumb: string;
   title: string;
   type: string;
+}
+
+export interface genre {
   genre_name: string[];
+}
+
+export interface FormData {
+  search: string;
 }

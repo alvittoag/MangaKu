@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { getApiDetail } from "../components/GetApi";
 import { detail } from "../Model";
@@ -6,6 +6,11 @@ import { detail } from "../Model";
 interface Detail {
   data: detail;
   isLoading: boolean;
+  genre_name?: string;
+}
+
+interface Genre {
+  genre_name: string;
 }
 
 const Detail = () => {
@@ -51,9 +56,12 @@ const Detail = () => {
                 <div className="">
                   Genre :
                   <div className="font-mono flex flex-wrap py-2 gap-1">
-                    {data?.genre_list.map((genre: any, key) => (
-                      <p key={key}>{genre.genre_name} ,</p>
-                    ))}
+                    {data &&
+                      Object.values(data?.genre_list).map(
+                        (genre: any, key: number) => (
+                          <p key={key}>{genre?.genre_name} ,</p>
+                        )
+                      )}
                   </div>
                 </div>
               </div>

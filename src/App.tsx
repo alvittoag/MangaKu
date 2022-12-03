@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Detail from "./pages/Detail";
 import Genre from "./pages/Genre";
 import Home from "./pages/Home";
+import SearchDetail from "./pages/SearchDetail";
 
 function App() {
   const queryClient = new QueryClient();
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/genre" element={<Genre />} />
           <Route path="/manga/detail/:key" element={<Detail />} />
+          <Route path="/:key" element={<SearchDetail />} />
         </Routes>
       </Router>
     </QueryClientProvider>
