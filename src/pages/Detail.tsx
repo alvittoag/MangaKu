@@ -9,10 +9,6 @@ interface Detail {
   genre_name?: string;
 }
 
-interface Genre {
-  genre_name: string;
-}
-
 const Detail = () => {
   const { key } = useParams<{ key?: string }>();
 
@@ -58,8 +54,8 @@ const Detail = () => {
                   <div className="font-mono flex flex-wrap py-2 gap-1">
                     {data &&
                       Object.values(data?.genre_list).map(
-                        (genre: any, key: number) => (
-                          <p key={key}>{genre?.genre_name} ,</p>
+                        (detail: detail, key: number) => (
+                          <p key={key}>{detail?.genre_name} ,</p>
                         )
                       )}
                   </div>

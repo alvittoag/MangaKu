@@ -17,7 +17,8 @@ export interface Search {
 export interface detail {
   author: string;
   chapter: string[];
-  genre_list: string[];
+  genre_list: Array<{ genre_name: string }> | string;
+  genre_name: string;
   status: string;
   synopsis: string;
   thumb: string;
