@@ -3,9 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Detail from "./pages/Detail";
 import Home from "./pages/Home";
-import SearchDetail from "./pages/SearchDetail";
 import Recommended from "./pages/Recommended";
-
+import SearchDetail from "./pages/SearchDetail";
 function App() {
   const queryClient = new QueryClient();
   return (

@@ -1,9 +1,8 @@
-export interface home {
+export interface MangaAllPage {
   title: string;
   thumb: string;
   endpoint: string;
   type: string;
-  uploaded_on: string;
 }
 
 export interface Search {

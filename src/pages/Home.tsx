@@ -2,10 +2,10 @@ import { GetApiHome } from "../components/GetApi";
 import HomeMangga from "../components/HomeMangga";
 import Loading from "../components/Loading";
 import Search from "../components/Search";
-import { home } from "../Model";
+import { MangaAllPage } from "../Model";
 
 interface Home {
-  data: home;
+  data: MangaAllPage;
   isLoading: boolean;
 }
 
@@ -28,8 +28,8 @@ const Home = () => {
 
           <div className="py-10 grid grid-cols-4 gap-10 items-start">
             {data &&
-              Object.values(data)?.map((home: home) => (
-                <HomeMangga home={home} key={home.endpoint} />
+              Object.values(data)?.map((manga: MangaAllPage) => (
+                <HomeMangga manga={manga} key={manga.endpoint} />
               ))}
           </div>
         </div>

@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
 import { getApiSearch } from "../components/GetApi";
 import SearchManga from "../components/SearchManga";
-import { home } from "../Model";
+import { MangaAllPage } from "../Model";
 
 const SearchDetail = () => {
   const { key } = useParams();
 
   interface Search {
-    data: home;
+    data: MangaAllPage;
     isLoading: boolean;
   }
 
@@ -23,8 +23,8 @@ const SearchDetail = () => {
         {isLoading && <h1>Loading...</h1>}
         <div className="py-10 grid grid-cols-4 gap-10 items-start">
           {data &&
-            Object.values(data)?.map((home: home) => (
-              <SearchManga home={home} key={home.endpoint} />
+            Object.values(data)?.map((manga: MangaAllPage) => (
+              <SearchManga manga={manga} key={manga.endpoint} />
             ))}
         </div>
       </div>

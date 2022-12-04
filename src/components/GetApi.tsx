@@ -39,3 +39,16 @@ export const getApiSearch = (endpoint: string) => {
 
   return { data, isLoading };
 };
+
+export const getApiRecommended = () => {
+  const { data, isLoading } = useQuery({
+    queryKey: ["recommended"],
+    queryFn: () =>
+      axios
+        .get("http://localhost:3000/api/recommended")
+        .then((res) => res.data.manga_list)
+        .catch((err) => console.log(err)),
+  });
+
+  return { data, isLoading };
+};
