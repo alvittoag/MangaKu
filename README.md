@@ -1,5 +1,5 @@
 # MangaKu - Frontend
-`Stack :  TypeScript, React, Tailwind`
+`Stack :  Vite, TypeScript, React, Tailwind`
 
 
 `Backend :
