@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { getApiDetail } from "../components/GetApi";
+import Loading from "../components/Loading";
 import { detail } from "../Model";
 
 interface Detail {
@@ -25,7 +26,7 @@ const Detail = () => {
   return (
     <>
       {isLoading ? (
-        <p className="px-5 py-10">Loading...</p>
+        <Loading />
       ) : (
         <div className="flex px-5 py-5">
           <div className="gap-5 border border-gray-300 rounded-lg  w-96">

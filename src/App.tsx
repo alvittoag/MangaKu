@@ -2,9 +2,9 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Detail from "./pages/Detail";
-import Genre from "./pages/Genre";
 import Home from "./pages/Home";
 import SearchDetail from "./pages/SearchDetail";
+import Recommended from "./pages/Recommended";
 
 function App() {
   const queryClient = new QueryClient();
@@ -14,7 +14,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/genre" element={<Genre />} />
+          <Route path="/recommended" element={<Recommended />} />
           <Route path="/manga/detail/:key" element={<Detail />} />
           <Route path="/:key" element={<SearchDetail />} />
         </Routes>

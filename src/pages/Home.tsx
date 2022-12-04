@@ -1,5 +1,6 @@
 import { GetApiHome } from "../components/GetApi";
 import HomeMangga from "../components/HomeMangga";
+import Loading from "../components/Loading";
 import Search from "../components/Search";
 import { home } from "../Model";
 
@@ -13,22 +14,26 @@ const Home = () => {
 
   return (
     <div className="px-5 py-8">
-      <div>
-        <div className="flex justify-between">
-          <h1 className="text-xl underline underline-offset-8">
-            Popular Mangga
-          </h1>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div>
+          <div className="flex justify-between">
+            <h1 className="text-xl underline underline-offset-8">
+              Popular Mangga
+            </h1>
 
-          <Search />
+            <Search />
+          </div>
+
+          <div className="py-10 grid grid-cols-4 gap-10 items-start">
+            {data &&
+              Object.values(data)?.map((home: home) => (
+                <HomeMangga home={home} key={home.endpoint} />
+              ))}
+          </div>
         </div>
-        {isLoading && <h1>Loading...</h1>}
-        <div className="py-10 grid grid-cols-4 gap-10 items-start">
-          {data &&
-            Object.values(data)?.map((home: home) => (
-              <HomeMangga home={home} key={home.endpoint} />
-            ))}
-        </div>
-      </div>
+      )}
     </div>
   );
 };

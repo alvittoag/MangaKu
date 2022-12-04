@@ -25,16 +25,16 @@ const Navbar = () => {
           )}
         </Link>
 
-        <Link to="/genre">
+        <Link to="/recommended">
           {navigation === 2 ? (
             <h5
               className="bg-slate-600 py-2 px-3 rounded-md"
               onClick={() => handleNavigation(2)}
             >
-              Genre
+              Recommended
             </h5>
           ) : (
-            <h5 onClick={() => handleNavigation(2)}>Genre</h5>
+            <h5 onClick={() => handleNavigation(2)}>Recommended</h5>
           )}
         </Link>
 
