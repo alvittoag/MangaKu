@@ -1,5 +1,5 @@
 # MangaKu - Frontend
-`Techonologies :  TypeScript, React, React Query, React Hook Form, Tailwind`
+`Stack :  TypeScript, React, Tailwind`
 
 
 `Backend :
