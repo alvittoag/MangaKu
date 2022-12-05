@@ -28,13 +28,13 @@ const Detail = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="flex px-5 py-5">
+        <div className="flex px-14 py-10 mt-[5rem]">
           <div className="gap-5 border border-gray-300 rounded-lg  w-96">
             <img
               src={data?.thumb}
               alt="/"
               width={280}
-              className="rounded-lg mx-auto mt-2"
+              className="rounded-3xl mx-auto mt-2 px-2"
             />
             <div className="py-3 px-3">
               <h1 className="border-b border-gray-300 text-lg font-semibold pb-2">
