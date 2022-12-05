@@ -1,17 +1,17 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 
-export const GetApiHome = () => {
-  const { data, isLoading } = useQuery({
+export const GetApiHome = (endpoint: string) => {
+  const { data, isLoading, refetch } = useQuery({
     queryKey: ["home"],
     queryFn: () =>
       axios
-        .get("http://localhost:3000/api/manga/popular/1")
+        .get(endpoint)
         .then((res) => res.data.manga_list)
         .catch((err) => console.log(err)),
   });
 
-  return { data, isLoading };
+  return { data, isLoading, refetch };
 };
 
 export const getApiDetail = (endpoint: string) => {

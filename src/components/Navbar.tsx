@@ -37,17 +37,6 @@ const Navbar = () => {
             <h5 onClick={() => handleNavigation(2)}>Recommended</h5>
           )}
         </Link>
-
-        {navigation === 3 ? (
-          <h5
-            className="bg-slate-600 py-2 px-3 rounded-md"
-            onClick={() => handleNavigation(3)}
-          >
-            Manhwa
-          </h5>
-        ) : (
-          <h5 onClick={() => handleNavigation(3)}>Manhwa</h5>
-        )}
       </div>
     </div>
   );

@@ -42,16 +42,23 @@ const Detail = () => {
               </h1>
               <div className="mt-3 flex flex-col gap-3 w-full text-sm font-bold">
                 <h5>
-                  Type :{" "}
-                  <span className="font-mono font-normal">{data?.type}</span>
+                  Type :
+                  <span className="ml-2 font-mono font-normal">
+                    {data?.type}
+                  </span>
+                </h5>
+
+                <h5>
+                  Status :
+                  <span className="ml-2 font-mono font-normal">
+                    {data?.status}
+                  </span>
                 </h5>
                 <h5>
-                  Author :{" "}
-                  <span className="font-mono font-normal">{data?.author}</span>
-                </h5>
-                <h5>
-                  Status :{" "}
-                  <span className="font-mono font-normal">{data?.status}</span>
+                  Author :
+                  <span className="ml-2 font-mono font-normal">
+                    {data?.author}
+                  </span>
                 </h5>
                 <div className="">
                   Genre :
