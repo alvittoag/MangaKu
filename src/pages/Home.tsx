@@ -23,14 +23,9 @@ const Home = () => {
   const { data, isLoading, refetch }: Home = GetApiHome(
     `http://localhost:3000/api/manga/popular/${popularcount}`
   );
-  const isFetching = useIsFetching();
-  const isFetchingPagination = useIsFetching(["home"]);
-  console.log(isFetching);
   const handlePagination = (data: Pagination) => {
     setPopularcount(data.selected);
     refetch();
-    isFetching;
-    isFetchingPagination;
   };
 
   return (
@@ -43,7 +38,7 @@ const Home = () => {
             <Search />
           </div>
 
-          <div className="py-10 grid grid-cols-4 gap-10 items-start">
+          <div className="py-9 mt-4 grid grid-cols-4 gap-10 items-start">
             {data &&
               Object.values(data)?.map((manga: MangaAllPage) => (
                 <HomeMangga manga={manga} key={manga.endpoint} />
