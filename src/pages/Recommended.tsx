@@ -12,7 +12,7 @@ const Recommended = () => {
   const { data, isLoading }: Recommned = getApiRecommended();
 
   return (
-    <div className="px-5 py-8">
+    <div className="px-14 py-10 mt-[5rem]">
       {isLoading ? (
         <Loading />
       ) : (

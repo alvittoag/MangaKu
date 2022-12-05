@@ -34,16 +34,12 @@ const Home = () => {
   };
 
   return (
-    <div className="px-5 py-8">
+    <div className="px-14 py-10 mt-[5rem]">
       {isLoading ? (
         <Loading />
       ) : (
         <>
-          <div className="flex justify-between">
-            <h1 className="text-xl underline underline-offset-8">
-              Popular Mangga
-            </h1>
-
+          <div className="flex justify-center w-full">
             <Search />
           </div>
 

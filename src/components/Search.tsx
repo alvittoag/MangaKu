@@ -18,8 +18,8 @@ const Search = () => {
       <input
         {...register("search")}
         type="text"
-        placeholder="Search Manga..."
-        className="ring-1 ring-gray-400 py-1 px-3 rounded-lg shadow-lg"
+        placeholder="Search Manga, Manhwa Dll...."
+        className="ring-1 ring-gray-200 py-3 px-3 rounded-lg shadow-md w-[800px]"
       />
     </form>
   );
