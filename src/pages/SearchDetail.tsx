@@ -17,14 +17,16 @@ const SearchDetail = () => {
   );
   console.log(data);
   return (
-    <div className="px-5 py-8">
+    <div className="px-14 py-10 mt-[5rem]">
       {isLoading ? (
         <Loading />
       ) : (
         <div>
-          <h1 className="text-xl underline underline-offset-8">Search</h1>
+          <h1 className="text-xl underline underline-offset-8">
+            Your search results
+          </h1>
 
-          <div className="py-10 grid grid-cols-4 gap-10 items-start">
+          <div className="py-10 mt-8 grid grid-cols-4 gap-10 items-start">
             {data &&
               Object.values(data)?.map((manga: MangaAllPage) => (
                 <SearchManga manga={manga} key={manga.endpoint} />
