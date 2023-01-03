@@ -5,4 +5,4 @@
 `Backend :
 https://github.com/febryardiansyah/manga-api`
 
-# ![Preview](img/Capture.PNG)
+# ![Preview](img/Capture.png)
